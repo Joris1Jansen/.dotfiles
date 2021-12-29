@@ -134,3 +134,9 @@ done
 eval "$(starship init zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/joris/google-cloud-sdk/path.zsh.inc' ]; then . '/home/joris/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/joris/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/joris/google-cloud-sdk/completion.zsh.inc'; fi
