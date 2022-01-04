@@ -54,13 +54,17 @@ Plug 'hrsh7th/vim-vsnip'
 " Flutter
 Plug 'akinsho/flutter-tools.nvim'
 
-" Isort && Auto Pairs
+" Isort && Auto Pairs && Comment
 Plug 'brentyi/isort.vim'
 Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-commentary'
 
 " Python lint/fix
 Plug 'dense-analysis/ale'
 Plug 'Vimjas/vim-python-pep8-indent'
+
+" Vue
+Plug 'storyn26383/vim-vue'
 
 call plug#end()
 
@@ -82,8 +86,8 @@ nnoremap <silent> <Leader>+ :vertical resize +5<CR>
 nnoremap <silent> <Leader>- :vertical resize -5<CR>
 
 " Fix files with prettier, and then ESLint.
-let g:ale_linters = {'python': ['flake8', 'pydocstyle']}
+let g:ale_linters = {'python': ['flake8', 'pydocstyle'], 'vue': ['eslint', 'prettier'],}
 " Equivalent to the above.
-let g:ale_fixers = {'python': ['black', 'isort', 'remove_trailing_lines', 'trim_whitespace']}
+let g:ale_fixers = {'python': ['isort'], 'vue': ['eslint', 'prettier'], '*': ['remove_trailing_lines', 'trim_whitespace']}
 " Fix on save
 let g:ale_fix_on_save = 1
