@@ -33,4 +33,5 @@ vim.opt.shortmess:append("c")
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+vim.g.netrw_banner=1
 
