@@ -16,6 +16,9 @@ nnoremap("n", "nzzzv")
 nnoremap("N", "Nzzzv")
 nnoremap("J", "mzJ`z")
 
+nnoremap ("<leader>lk", "O<Esc>")
+nnoremap ("<leader>lj", "o<Esc>j")
+
 -- greatest remap ever
 xnoremap("<leader>p", "\"_dP")
 
