@@ -155,6 +155,8 @@ export PATH="$PATH:$ANDROID_HOME/tools/"
 export PATH="$PATH:$ANDROID_HOME/platform-tools/"
 export PATH="$PATH:$ANDROID_HOME/emulator/"
 
+
+export PATH="$PATH:$HOME/.terraform"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/joris/google-cloud-sdk/path.zsh.inc' ]; then . '/home/joris/google-cloud-sdk/path.zsh.inc'; fi
 

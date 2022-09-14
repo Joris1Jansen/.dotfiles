@@ -21,3 +21,7 @@ require('lspconfig').pyright.setup(config())
 
 -- yaml
 require('lspconfig').yamlls.setup{}
+
+
+-- terraform
+require('lspconfig').terraformls.setup{}
