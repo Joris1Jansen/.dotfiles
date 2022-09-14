@@ -4,5 +4,15 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.volar.setup{
   filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'}
 }
-require("flutter-tools").setup{}
 require'lspconfig'.tailwindcss.setup{}
+require'lspconfig'.gopls.setup{
+    cmd = {"gopls", "serve"},
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+}

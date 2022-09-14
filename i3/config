@@ -147,6 +147,7 @@ exec --no-startup-id i3-msg 'workspace 2; exec google-chrome'
 exec --no-startup-id i3-msg 'workspace 4; exec gnome-terminal'
 exec --no-startup-id i3-msg 'workspace 9; exec pavucontrol'
 
+for_window [title="^Android Emulator*"] floating enable
 
 ## [Move workspace between monitor]
 bindsym $mod+m move workspace to output left
@@ -230,7 +231,7 @@ bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 #interactive screenshot by pressing printscreen
-bindsym Print exec gnome-screenshot -i 
+bindsym Print exec gnome-screenshot -i
 #crop-area screenshot by pressing Mod + printscreen
 bindsym $mod+Print exec gnome-screenshot -a
 

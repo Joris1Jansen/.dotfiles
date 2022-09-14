@@ -10,6 +10,7 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/joris/.oh-my-zsh"
+export XDG_CONFIG_HOME=$HOME/.config
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,6 +72,7 @@ export ZSH="/home/joris/.oh-my-zsh"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+HISTSIZE=10000
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -112,10 +114,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias runserver="python src/manage.py runserver"
-alias migrate="python src/manage.py migrate"
+alias ispmigrate="python src/manage.py migrate"
 alias celwork="python src/manage.py celery_workers"
 alias frontend="set BROWSER=none && yarn start --browser='firefox'"
 alias isplog="tail -f isp.log"
+
+alias pgadmin4="./../../usr/pgadmin4/bin/pgadmin4"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -135,8 +139,28 @@ eval "$(starship init zsh)"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
+## ADD GO TO PATH
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH="$PATH:$HOME/.dotnet/tools/"
+export AndroidSdkDirectory=~/Android/Sdk
+# export ANDROID_HOME=~/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$PATH:$ANDROID_HOME/tools/"
+export PATH="$PATH:$ANDROID_HOME/platform-tools/"
+export PATH="$PATH:$ANDROID_HOME/emulator/"
+
+
+export PATH="$PATH:$HOME/.terraform"
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/joris/google-cloud-sdk/path.zsh.inc' ]; then . '/home/joris/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/joris/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/joris/google-cloud-sdk/completion.zsh.inc'; fi
+
+alias luamake=/home/joris/lua-language-server/3rd/luamake/luamake
