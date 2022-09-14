@@ -131,9 +131,9 @@ VIRTUALENVWRAPPER_PYTHON='/usr/bin/python3'
 source /usr/local/bin/virtualenvwrapper.sh
 
 ## [Source all hidden files from the ~/Executable folder]
-for file in ~/Executable/**/.*; do
-	source $file;
-done
+# for file in ~/Executable/**/.*; do
+# 	source $file;
+# done
 
 eval "$(starship init zsh)"
 
