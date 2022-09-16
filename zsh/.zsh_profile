@@ -5,8 +5,20 @@ export GOPATH=$HOME/go
 export GIT_EDITOR=$VIM
 export DOTFILES=$HOME/.dotfiles
 
-addToPathFront $HOME/.local/scripts
-addToPathFront $HOME/.local/bin
-addToPathFront $HOME/.local/n/bin/
-addToPathFront $HOME/.local/go/bin
-addToPathFront $HOME/go/bin
+export GOROOT=/usr/local/go
+export TESTPATH=$HOME/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH="$PATH:$HOME/.dotnet/tools/"
+export AndroidSdkDirectory=~/Android/Sdk
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$PATH:$ANDROID_HOME/tools/"
+export PATH="$PATH:$ANDROID_HOME/platform-tools/"
+export PATH="$PATH:$ANDROID_HOME/emulator/"
+
+# addToPathFront $HOME/.local/scripts
+# addToPathFront $HOME/.local/bin
+# addToPathFront $HOME/.local/n/bin/
+# addToPathFront $HOME/.local/go/bin
+# addToPathFront $HOME/go/bin

@@ -123,16 +123,16 @@ source /usr/local/bin/virtualenvwrapper.sh
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 ## ADD GO TO PATH
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH="$PATH:$HOME/.dotnet/tools/"
-export AndroidSdkDirectory=~/Android/Sdk
-
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH="$PATH:$ANDROID_HOME/tools/"
-export PATH="$PATH:$ANDROID_HOME/platform-tools/"
-export PATH="$PATH:$ANDROID_HOME/emulator/"
+# export GOROOT=/usr/local/go
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# export PATH="$PATH:$HOME/.dotnet/tools/"
+# export AndroidSdkDirectory=~/Android/Sdk
+#
+# export ANDROID_HOME=$HOME/Android/Sdk
+# export PATH="$PATH:$ANDROID_HOME/tools/"
+# export PATH="$PATH:$ANDROID_HOME/platform-tools/"
+# export PATH="$PATH:$ANDROID_HOME/emulator/"
 
 
 export PATH="$PATH:$HOME/.terraform"
