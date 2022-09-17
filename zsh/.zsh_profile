@@ -1,24 +1,23 @@
 export XDG_CONFIG_HOME=$HOME/.config
 VIM="nvim"
 
+PERSONAL=$XDG_CONFIG_HOME/personal
+source $PERSONAL/env
+for i in `find -L $PERSONAL`; do
+    source $i
+done
+
 export GOPATH=$HOME/go
 export GIT_EDITOR=$VIM
 export DOTFILES=$HOME/.dotfiles
 
-export GOROOT=/usr/local/go
-export TESTPATH=$HOME/go
-export GOPATH=$HOME/go
+addToPathFront $HOME/.local/.npm-global/bin
+addToPathFront $HOME/.local/scripts
+addToPathFront $HOME/.local/bin
+addToPathFront $HOME/.local/n/bin/
+addToPathFront $HOME/.local/go/bin
+addToPathFront $HOME/go/bin
+
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH="$PATH:$HOME/.dotnet/tools/"
-export AndroidSdkDirectory=~/Android/Sdk
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH="$PATH:$ANDROID_HOME/tools/"
-export PATH="$PATH:$ANDROID_HOME/platform-tools/"
-export PATH="$PATH:$ANDROID_HOME/emulator/"
-
-# addToPathFront $HOME/.local/scripts
-# addToPathFront $HOME/.local/bin
-# addToPathFront $HOME/.local/n/bin/
-# addToPathFront $HOME/.local/go/bin
-# addToPathFront $HOME/go/bin

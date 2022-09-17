@@ -1,0 +1,31 @@
+#!/usr/bin/env zsh
+
+export STOW_FOLDERS="bin,nvim,tmux,uwuntu,netflix,personal,i3,zsh,xkb"
+
+startMongo() {
+    sudo systemctl start mongod
+    sudo systemctl enable mongod
+}
+
+stopMongo() {
+    sudo service mongod stop
+}
+
+
+changeBackground() {
+    feh --randomize --bg-fill ~/Personal/Backgrounding
+}
+
+
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+}
+
+addToPathFront() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
