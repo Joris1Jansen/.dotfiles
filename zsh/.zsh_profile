@@ -17,6 +17,7 @@ addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/n/bin/
 addToPathFront $HOME/.local/go/bin
 addToPathFront $HOME/go/bin
+addToPathFront $HOME/usr/lib/dart/bin
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
