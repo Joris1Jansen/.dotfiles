@@ -17,10 +17,25 @@ startDocker() {
 
 stopDocker() {
     sudo systemctl stop docker
-    sudo systemctl stop docker
+    sudo systemctl stop docker.service
     sudo systemctl stop docker.socket
 }
 
+startRedis() {
+    sudo systemctl start redis
+}
+
+stopRedis() {
+    sudo systemctl stop redis
+}
+
+startPostgres() {
+    sudo systemctl start postgresql
+}
+
+stopPostgres() {
+    sudo systemctl stop postgresql
+}
 
 changeBackground() {
     feh --randomize --bg-fill ~/Personal/Backgrounding
