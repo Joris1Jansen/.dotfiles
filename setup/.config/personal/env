@@ -11,6 +11,16 @@ stopMongo() {
     sudo service mongod stop
 }
 
+startDocker() {
+    sudo systemctl start docker
+}
+
+stopDocker() {
+    sudo systemctl stop docker
+    sudo systemctl stop docker
+    sudo systemctl stop docker.socket
+}
+
 
 changeBackground() {
     feh --randomize --bg-fill ~/Personal/Backgrounding
