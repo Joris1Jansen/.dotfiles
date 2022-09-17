@@ -142,8 +142,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 
 ## [Basic Autostart]
-exec --no-startup-id i3-msg 'workspace 1; exec firefox'
-exec --no-startup-id i3-msg 'workspace 2; exec google-chrome'
+exec --no-startup-id i3-msg 'workspace 1; exec brave-browser'
 exec --no-startup-id i3-msg 'workspace 4; exec gnome-terminal'
 exec --no-startup-id i3-msg 'workspace 9; exec pavucontrol'
 
