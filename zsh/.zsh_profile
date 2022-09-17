@@ -19,5 +19,4 @@ addToPathFront $HOME/.local/go/bin
 addToPathFront $HOME/go/bin
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-export PATH="$PATH:$HOME/.dotnet/tools/"
 
