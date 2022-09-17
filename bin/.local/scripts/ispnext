@@ -1,44 +1,42 @@
 #!/usr/bin/env bash
 
-function ispnext() {
-    # Set Session Name.
-    SESSION="ISP"
+# Set Session Name.
+SESSION="ISP"
 
-	# Check if session exists.
-    SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
+# Check if session exists.
+SESSIONEXISTS=$(tmux list-sessions | grep $SESSION)
 
-    # Only create tmux session if it doesn't already exist.
-    if [ "$SESSIONEXISTS" = "" ]
-    then
-        # Start New Session with our name.
-        tmux new-session -d -s $SESSION
+# Only create tmux session if it doesn't already exist.
+if [ "$SESSIONEXISTS" = "" ]
+then
+    # Start New Session with our name.
+    tmux new-session -d -s $SESSION
 
-        # Window 1: Frontend.
-        tmux rename-window -t 1 'frontend'
-        tmux send-keys -t 'frontend' 'cd ~/code/ISPnext/ispnext/frontend' C-m 'clear' C-m
+    # Window 1: Frontend.
+    tmux rename-window -t 1 'frontend'
+    tmux send-keys -t 'frontend' 'cd ~/code/ISPnext/ispnext/frontend' C-m 'clear' C-m
 
-        # Window 2: Backend
-        tmux new-window -t $SESSION:2 -n 'backend'
-        tmux send-keys -t 'backend' 'cd ~/code/ISPnext/ispnext/backend' C-m 'workon ispnext3.9' C-m 'clear' C-m
+    # Window 2: Backend
+    tmux new-window -t $SESSION:2 -n 'backend'
+    tmux send-keys -t 'backend' 'cd ~/code/ISPnext/ispnext/backend' C-m 'workon ispnext3.9' C-m 'clear' C-m
 
-        # Window 3: Celery
-        tmux new-window -t $SESSION:3 -n 'celery'
-        tmux send-keys -t 'celery' 'cd ~/code/ISPnext/ispnext/backend' C-m 'workon ispnext3.9' C-m 'clear' C-m
+    # Window 3: Celery
+    tmux new-window -t $SESSION:3 -n 'celery'
+    tmux send-keys -t 'celery' 'cd ~/code/ISPnext/ispnext/backend' C-m 'workon ispnext3.9' C-m 'clear' C-m
 
-        # Window 7: Flower
-        # Run with: celery -A isp flower --port=5566
-        tmux new-window -t $SESSION:7 -n 'flower'
-        tmux send-keys -t 'flower' 'cd ~/code/ISPnext/ispnext/backend/src' C-m 'clear' C-m
+    # Window 7: Flower
+    # Run with: celery -A isp flower --port=5566
+    tmux new-window -t $SESSION:7 -n 'flower'
+    tmux send-keys -t 'flower' 'cd ~/code/ISPnext/ispnext/backend/src' C-m 'clear' C-m
 
-		# Window 8: Testing
-        tmux new-window -t $SESSION:8 -n 'test'
-        tmux send-keys -t 'test' 'cd ~/code/ISPnext/ispnext/backend' C-m 'workon ispnext3.9' C-m 'clear' C-m
+    # Window 8: Testing
+    tmux new-window -t $SESSION:8 -n 'test'
+    tmux send-keys -t 'test' 'cd ~/code/ISPnext/ispnext/backend' C-m 'workon ispnext3.9' C-m 'clear' C-m
 
-		# Window 9: Utility
-        tmux new-window -t $SESSION:9 -n 'util'
-        tmux send-keys -t 'util' 'cd ~/code/ISPnext/ispnext' C-m 'clear' C-m
-    fi
+    # Window 9: Utility
+    tmux new-window -t $SESSION:9 -n 'util'
+    tmux send-keys -t 'util' 'cd ~/code/ISPnext/ispnext' C-m 'clear' C-m
+fi
 
-    # Attach Session, on the Main window
-    tmux attach-session -t $SESSION:1
-}
+# Attach Session, on the Main window
+tmux attach-session -t $SESSION:1
