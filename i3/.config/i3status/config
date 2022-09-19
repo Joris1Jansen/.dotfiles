@@ -14,8 +14,8 @@ general {
 order += "disk /"
 order += "wireless _first_"
 order += "battery all"
-order += "tztime local"
 order += "memory"
+order += "tztime local"
 
 disk "/" {
         format = "%avail"
