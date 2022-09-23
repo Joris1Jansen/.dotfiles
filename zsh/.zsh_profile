@@ -15,9 +15,14 @@ addToPathFront $HOME/.local/.npm-global/bin
 addToPathFront $HOME/.local/scripts
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.local/n/bin/
-addToPathFront $HOME/.local/go/bin
-addToPathFront $HOME/go/bin
 addToPathFront $HOME/usr/lib/dart/bin
+
+addToPath $HOME/usr/local/go/bin
+addToPath $HOME/go/bin
+
 
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
+# Where should I put you?
+bindkey -s ^f "tmux-sessionizer\n"
+export PATH=$PATH:/usr/local/go/bin
