@@ -244,3 +244,4 @@ exec_always compton
 
 ## [MONITOR SETUP]
 exec --no-startup-id autorandr --change
+
