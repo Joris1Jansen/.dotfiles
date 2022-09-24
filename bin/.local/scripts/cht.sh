@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-languages=$(echo "go python javascript typescript rust dart" | tr " " "\n")
-core_utils=$(echo "find xargs sed awk" | tr " " "\n")
+languages=$(echo "go python javascript typescript nodejs tmux bash lua zsh rust dart" | tr " " "\n")
+core_utils=$(echo "find xargs sed awk man tr head tail git git-worktree ssh cat docker docker-compose make chown chmod cp mv terraform aws" | tr " " "\n")
 
 selected=$(echo -e "$languages\n$core_utils" | fzf)
 
